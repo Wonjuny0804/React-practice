@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# storybook
+.gitignore
+.storybook
+yarn.lock
+package.json
