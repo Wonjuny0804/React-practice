@@ -1,23 +1,17 @@
 import './App.css'
-import { createGlobalStyle } from'styled-components'
 import { 
-  RefInput,
-  TodoInput
+  Checkbox,
+  Box,
 } from '../components'
 
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: #29ecef;
-  }
-`
 
 
 function App() {
 
   return (
     <div className="App">
-      <TodoInput />
+      <Box />
+      <Checkbox id="test" content="checkbox"/>
     </div>
   );
 }

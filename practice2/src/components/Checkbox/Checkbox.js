@@ -1,16 +1,40 @@
-import React from 'react'
+import { bool, string, func } from 'prop-types'
+import { 
+  checkbox,
+  checked as checkedClass,
+} from './Checkbox.module.scss'
 
-const Checkbox = ({checked, id, content}) => {
+const Checkbox = ({
+  id,
+  checked,
+  onChange,
+  ...restProps  
+}) => {
   return (
   <>
+    <label
+      htmlFor={id} 
+      className={`
+      ${checkbox} 
+      ${checked ? checkedClass : null}
+      `.trim()}
+      >
     <input
+      id={id}
       type="checkbox"
       checked={checked}
-      id={id}
-    />
-    <label for={id}>{content}</label>
+      onChange={onChange}
+      {...restProps}
+    />{' '}
+    </label>
   </>
   )  
+}
+
+Checkbox.propTypes = {
+  checked: bool,
+  className: string,
+  onChange: func,
 }
 
 export default Checkbox

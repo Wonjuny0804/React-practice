@@ -1,5 +1,5 @@
 
-.todoInput {
+.box {
   box-sizing: border-box;
   width: 315px;
   height: 50px;
@@ -8,13 +8,21 @@
   border-radius: 10px;
   border: none;
   outline: none;
-  padding: 0 20px 0 46px;
+  padding: 16px;
   color: #FFFFFF;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: unset;
+
+  label {
+    width: 20px;
+    height: 20px;
+  }
   
   &.non-active {
     background: #F5F5F5;
